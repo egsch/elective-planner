@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Elective</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="sidebars">
+        <h1 id="mainTitle">Elective <br> Search</h1>
+        <a href="{{ url_for('search_page') }}">
+            <div class="sidebarItem selected">
+                <ion-icon name="search"></ion-icon>
+                <h3>Search</h3>
+            </div>
+        </a>
+        <a> 
+            <div class="sidebarItem">
+                <ion-icon name="list-outline"></ion-icon>
+                <h3>Results</h3>
+            </div>
+        </a>
+
+    </div>
+    <div id="mainbody">
+        <h3>Search</h3>
+        <form action="{{ url_for('results_page') }}" method="POST">
+            <h3 class="formTitle">Interests</h3>
+            <div class="optionWrapper">
+                <input type="checkbox" class="selectBox interests" id="interest1" name="interest1"
+                    value="Technology"></input>
+                <label for="interest1" class="selectLabel">Technology</label>
+                <input type="checkbox" class="selectBox interests" id="interest2" name="interest2" value="Art"></input>
+                <label for="interest2" class="selectLabel">Art</label>
+                <input type="checkbox" class="selectBox interests" id="interest3" name="interest3"
+                    value="Finance & Business"></input>
+                <label for="interest3" class="selectLabel">Finance & Business</label>
+                <input type="checkbox" class="selectBox interests" id="interest4" name="interest4"
+                    value="Natural Science"></input>
+                <label for="interest4" class="selectLabel">Natural Science</label>
+                <input type="checkbox" class="selectBox interests" id="interest5" name="interest5"
+                    value="Communication"></input>
+                <label for="interest5" class="selectLabel">Communication</label>
+                <input type="checkbox" class="selectBox interests" id="interest6" name="interest6"
+                    value="Politics"></input>
+                <label for="interest6" class="selectLabel">Politics</label>
+                <input type="checkbox" class="selectBox interests" id="interest7" name="interest7"
+                    value="Language"></input>
+                <label for="interest7" class="selectLabel">Language</label>
+            </div>
+            <div class="formFlex">
+                <div>
+                    <h3 class="formTitle">Credit Hours</h3>
+                    <div class="optionWrapper">
+                        <input type="checkbox" class="selectBox hours" id="hours1" name="hours1" value="1"></input>
+                        <label for="hours1" class="selectLabel">1</label>
+                        <input type="checkbox" class="selectBox hours" id="hours2" name="hours2" value="2"></input>
+                        <label for="hours2" class="selectLabel">2</label>
+                        <input type="checkbox" class="selectBox hours" id="hours3" name="hours3" value="3"></input>
+                        <label for="hours3" class="selectLabel">3</label>
+                        <input type="checkbox" class="selectBox hours" id="hours4" name="hours4" value="4"></input>
+                        <label for="hours4" class="selectLabel">4</label>
+                        <input type="checkbox" class="selectBox hours" id="hours5" name="hours5" value="5"></input>
+                        <label for="hours5" class="selectLabel">5</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="formTitle">Class Level</h3>
+            <div class="optionWrapper">
+                <input type="checkbox" class="selectBox hours" id="level1" name="level1" value="1"></input>
+                <label for="level1" class="selectLabel">Freshman</label>
+                <input type="checkbox" class="selectBox hours" id="level2" name="level2" value="2"></input>
+                <label for="level2" class="selectLabel">Sophmore</label>
+                <input type="checkbox" class="selectBox hours" id="level3" name="level3" value="3"></input>
+                <label for="level3" class="selectLabel">Junior</label>
+                <input type="checkbox" class="selectBox hours" id="level4" name="level4" value="4"></input>
+                <label for="level4" class="selectLabel">Senior</label>
+                <input type="checkbox" class="selectBox hours" id="level5" name="level5" value="5"></input>
+                <label for="level5" class="selectLabel">Graduate</label>
+            </div>
+            <h3 class="formTitle">Weekdays</h3>
+            <div class="optionWrapper">
+                <input type="checkbox" class="selectBox weekdays" id="weekday1" name="weekday1" value="Monday"></input>
+                <label for="weekday1" class="selectLabel">Monday</label>
+                <input type="checkbox" class="selectBox  weekdays" id="weekday2" name="weekday2"
+                    value="Tuesday"></input>
+                <label for="weekday2" class="selectLabel">Tuesday</label>
+                <input type="checkbox" class="selectBox  weekdays" id="weekday3" name="weekday3"
+                    value="Wednesday"></input>
+                <label for="weekday3" class="selectLabel">Wednesday</label>
+                <input type="checkbox" class="selectBox  weekdays" id="weekday4" name="weekday4"
+                    value="Thursday"></input>
+                <label for="weekday4" class="selectLabel">Thursday</label>
+                <input type="checkbox" class="selectBox  weekdays" id="weekday5" name="weekday5" value="Friday"></input>
+                <label for="weekday5" class="selectLabel">Friday</label>
+                <input type="checkbox" class="selectBox  weekdays" id="weekday6" name="weekday6"
+                    value="Saturday"></input>
+                <label for="weekday6" class="selectLabel">Saturday</label>
+                <input type="checkbox" class="selectBox  weekdays" id="weekday7" name="weekday7" value="Sunday"></input>
+                <label for="weekday7" class="selectLabel">Sunday</label>
+            </div>
+            <div class="formFlex">
+            <div>
+            <h3 class="formTitle">Time of Day</h3>
+            <div class="optionWrapper">
+                <input type="checkbox" class="selectBox times" id="time1" name="time1" value="Morning"></input>
+                <label for="time1" class="selectLabel">Morning</label>
+                <input type="checkbox" class="selectBox times" id="time2" name="time2" value="Afternoon"></input>
+                <label for="time2" class="selectLabel times">Afternoon</label>
+                <input type="checkbox" class="selectBox times" id="time3" name="time3" value="Evening"></input>
+                <label for="time3" class="selectLabel">Evening</label>
+            </div>
+        </div>
+        <span class="breakSpan"></span>
+        <div>
+            <h3 class="formTitle">Mode</h3>
+            <div class="optionWrapper">
+                <input type="checkbox" class="selectBox modes" id="mode1" name="mode1" value="InPerson"></input>
+                <label for="mode1" class="selectLabel">In Person</label>
+                <input type="checkbox" class="selectBox modes" id="mode2" name="mode2" value="Online"></input>
+                <label for="mode2" class="selectLabel">Online</label>
+            </div>
+        </div>
+        </div>
+            <input class="submitButton" type="submit" value="Submit" />
+        </form>
+        <h2></h2>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
